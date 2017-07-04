@@ -12,11 +12,11 @@ class AboutNone(Koan):
 
     def test_none_is_an_object(self):
         "Unlike NULL in a lot of languages"
-        self.assertEqual(__, isinstance(None, object))
+        self.assertEqual(True, isinstance(None, object))
 
     def test_none_is_universal(self):
         "There is only one None"
-        self.assertEqual(__, None is None)
+        self.assertEqual(True, None is None)
 
     def test_what_exception_do_you_get_when_calling_nonexistent_methods(self):
         """
@@ -37,11 +37,11 @@ class AboutNone(Koan):
             # Need a recap on how to evaluate __class__ attributes?
             #   https://github.com/gregmalcolm/python_koans/wiki/Class-Attribute
 
-            self.assertEqual(__, ex.__class__)
+            self.assertEqual(exceptions.AttributeError, ex.__class__)
 
             # What message was attached to the exception?
             # (HINT: replace __ with part of the error message.)
-            self.assertMatch(__, ex.args[0])
+            self.assertMatch('AttributeError', ex.args[0])
 
     def test_none_is_distinct(self):
         """
