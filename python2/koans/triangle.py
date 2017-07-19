@@ -19,7 +19,17 @@
 #
 def triangle(a, b, c):
     # DELETE 'PASS' AND WRITE THIS CODE
-    pass
+    if (a <= 0) | (b <= 0) | (c <= 0):
+        raise TriangleError, "Sides should all be greater than 0"
+    sides=[a,b,c]
+    sides.sort()
+    if(sides[0]+sides[1] < sides[2]):
+    	raise TriangleError, "Not a valid triangle"
+    if ((a == b) & (b==c)):
+    	return 'equilateral' 
+    if (a==b) | (b==c) | (c==a):
+    	return 'isosceles' 
+    return 'scalene'
 
 
 # Error class used in part 2.  No need to change this code.
