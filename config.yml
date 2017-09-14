@@ -1,0 +1,14 @@
+## Customize the test machine
+machine:
+
+  timezone:
+    Europe/Dublin
+    #America/Los_Angeles # Set the timezone
+
+general:
+  build_dir: python2
+
+## Customize test commands
+test:
+  override:
+    - run.sh
