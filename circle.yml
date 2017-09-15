@@ -2,4 +2,5 @@ general:
   build_dir: python2
 test:
   override:
+    - cd python2
     - run.sh
