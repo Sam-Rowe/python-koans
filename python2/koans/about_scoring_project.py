@@ -35,7 +35,16 @@ from runner.koan import *
 
 def score(dice):
     # You need to write this method
-    pass
+    if dice.length == 0:
+      return 0
+    score = 0
+    if dice.length == 1:
+      if dice[0] == 5:
+        score = 50
+      if dice[0] == 1:
+        score = 100
+    
+    return score
 
 
 class AboutScoringProject(Koan):
