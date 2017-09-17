@@ -35,10 +35,10 @@ from runner.koan import *
 
 def score(dice):
     # You need to write this method
-    if dice.length == 0:
+    if len(dice) == 0:
       return 0
     score = 0
-    if dice.length == 1:
+    if len(dice) == 1:
       if dice[0] == 5:
         score = 50
       if dice[0] == 1:
