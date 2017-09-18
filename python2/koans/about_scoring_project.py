@@ -71,7 +71,7 @@ def score(dice):
       score += 1000
     if twos >= 3:
       score += 200
-    if threess >= 3:
+    if threes >= 3:
       score += 300
     if fours >= 3:
       score += 400
