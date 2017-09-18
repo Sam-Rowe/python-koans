@@ -43,7 +43,7 @@ def score(dice):
     threes = 0
     fours = 0
     fives = 0
-    sixs = 0
+    sixes = 0
     severns = 0
     eights = 0
     nines = 0
