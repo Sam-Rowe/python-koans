@@ -66,8 +66,8 @@ class AboutClasses(Koan):
         fido = self.Dog3()
         fido.set_name("Fido")
 
-        self.assertEqual(__, fido.get_name())  # access as method
-        self.assertEqual(__, fido.name)        # access as property
+        self.assertEqual("Fido", fido.get_name())  # access as method
+        self.assertEqual("Fido", fido.name)        # access as property
 
     # ------------------------------------------------------------------
 
@@ -87,7 +87,7 @@ class AboutClasses(Koan):
         fido = self.Dog4()
 
         fido.name = "Fido"
-        self.assertEqual(__, fido.name)
+        self.assertEqual("Fido", fido.name)
 
     # ------------------------------------------------------------------
 
@@ -101,10 +101,10 @@ class AboutClasses(Koan):
 
     def test_init_provides_initial_values_for_instance_variables(self):
         fido = self.Dog5("Fido")
-        self.assertEqual(__, fido.name)
+        self.assertEqual("Fido", fido.name)
 
     def test_args_must_match_init(self):
-        self.assertRaises(___, self.Dog5)  # Evaluates self.Dog5()
+        self.assertRaises("Missing Parameter exception", self.Dog5)  # Evaluates self.Dog5()
 
         # THINK ABOUT IT:
         # Why is this so?
