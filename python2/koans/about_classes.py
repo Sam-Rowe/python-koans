@@ -113,7 +113,7 @@ class AboutClasses(Koan):
         fido = self.Dog5("Fido")
         rover = self.Dog5("Rover")
 
-        self.assertEqual(____, rover.name == fido.name)
+        self.assertEqual(False, rover.name == fido.name)
 
     # ------------------------------------------------------------------
 
@@ -128,7 +128,7 @@ class AboutClasses(Koan):
             #
             # Implement this!
             #
-            return __
+            return "<Dog named '" + self._name + "'>"
 
         def __repr__(self):
             return "<Dog named '" + self._name + "'>"
@@ -136,7 +136,7 @@ class AboutClasses(Koan):
     def test_inside_a_method_self_refers_to_the_containing_object(self):
         fido = self.Dog6("Fido")
 
-        self.assertEqual(__, fido.get_self())  # Not a string!
+        self.assertEqual("<Dog named 'Fido'>", fido.get_self())  # Not a string!
 
     def test_str_provides_a_string_version_of_the_object(self):
         fido = self.Dog6("Fido")
