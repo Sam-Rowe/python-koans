@@ -22,15 +22,15 @@ class AboutNewStyleClasses(Koan):
         pass
 
     def test_new_style_classes_inherit_from_object_base_class(self):
-        self.assertEqual(____, issubclass(self.NewStyleClass, object))
-        self.assertEqual(____, issubclass(self.OldStyleClass, object))
+        self.assertEqual(True, issubclass(self.NewStyleClass, object))
+        self.assertEqual(True, issubclass(self.OldStyleClass, object))
 
     def test_new_style_classes_have_more_attributes(self):
-        self.assertEqual(__, len(dir(self.OldStyleClass)))
-        self.assertEqual(__, self.OldStyleClass.__doc__)
-        self.assertEqual(__, self.OldStyleClass.__module__)
+        self.assertEqual(2, len(dir(self.OldStyleClass)))
+        self.assertEqual("__doc__", self.OldStyleClass.__doc__)
+        self.assertEqual("__module__", self.OldStyleClass.__module__)
 
-        self.assertEqual(__, len(dir(self.NewStyleClass)))
+        self.assertEqual(18, len(dir(self.NewStyleClass)))
         # To examine the available attributes, run
         # 'dir(<Class name goes here>)'
         # from a python console
@@ -38,7 +38,7 @@ class AboutNewStyleClasses(Koan):
     # ------------------------------------------------------------------
 
     def test_old_style_classes_have_type_but_no_class_attribute(self):
-        self.assertEqual(__, type(self.OldStyleClass).__name__)
+        self.assertEqual(String, type(self.OldStyleClass).__name__)
 
         try:
             cls = self.OldStyleClass.__class__.__name__
@@ -46,7 +46,7 @@ class AboutNewStyleClasses(Koan):
             pass
 
         # What was that error message from the exception?
-        self.assertMatch(__, ex[0])
+        self.assertMatch(StandardError, ex[0])
 
     def test_new_style_classes_have_same_class_as_type(self):
         new_style = self.NewStyleClass()
