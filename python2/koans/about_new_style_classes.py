@@ -22,9 +22,9 @@ class AboutNewStyleClasses(Koan):
         pass
 
     def test_new_style_classes_inherit_from_object_base_class(self):
-        self.assertEqual(True, issubclass(self.NewStyleClass, object))
-        self.assertEqual(True, issubclass(self.OldStyleClass, object))
-
+        self.assertEqual(True,issubclass(self.NewStyleClass, object))
+        self.assertEqual(False, issubclass(self.OldStyleClass, object))
+                                                                                                                                                                               
     def test_new_style_classes_have_more_attributes(self):
         self.assertEqual(2, len(dir(self.OldStyleClass)))
         self.assertEqual("__doc__", self.OldStyleClass.__doc__)
