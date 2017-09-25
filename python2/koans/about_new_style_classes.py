@@ -28,7 +28,7 @@ class AboutNewStyleClasses(Koan):
     def test_new_style_classes_have_more_attributes(self):
         self.assertEqual(2, len(dir(self.OldStyleClass)))
         self.assertEqual("An old style class", self.OldStyleClass.__doc__)
-        self.assertEqual("__module__", self.OldStyleClass.__module__)
+        self.assertEqual("koans.about_new_style_classes", self.OldStyleClass.__module__)
 
         self.assertEqual(18, len(dir(self.NewStyleClass)))
         # To examine the available attributes, run
