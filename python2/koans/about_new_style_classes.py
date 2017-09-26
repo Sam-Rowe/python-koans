@@ -46,7 +46,7 @@ class AboutNewStyleClasses(Koan):
             pass
 
         # What was that error message from the exception?
-        self.assertMatch("StandardError", ex[0])
+        self.assertMatch("class OldStyleClass has no attribute '__class__'", ex[0])
 
     def test_new_style_classes_have_same_class_as_type(self):
         new_style = self.NewStyleClass()
