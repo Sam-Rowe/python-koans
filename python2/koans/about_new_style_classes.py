@@ -38,7 +38,7 @@ class AboutNewStyleClasses(Koan):
     # ------------------------------------------------------------------
 
     def test_old_style_classes_have_type_but_no_class_attribute(self):
-        self.assertEqual("String", type(self.OldStyleClass).__name__)
+        self.assertEqual("classobj", type(self.OldStyleClass).__name__)
 
         try:
             cls = self.OldStyleClass.__class__.__name__
