@@ -65,4 +65,4 @@ class AboutNewStyleClasses(Koan):
     def test_new_style_instances_have_same_class_as_type(self):
         new_style = self.NewStyleClass()
         self.assertEqual("NewStyleClass", new_style.__class__.__name__)
-        self.assertEqual("NewStyleClass", type(new_style) == new_style.__class__)
+        self.assertEqual(True, type(new_style) == new_style.__class__)
