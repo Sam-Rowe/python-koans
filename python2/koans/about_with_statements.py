@@ -95,8 +95,8 @@ class AboutWithStatements(Koan):
         with self.FileContexManager(file_name) as f:
             for line in f.readlines():
                 match = re.search('e', line)
-                    if match:
-                        return line
+                if match:
+                    return line
 
     def test_finding_lines2(self):
         self.assertEqual("test", self.find_line2("example_file.txt"))
