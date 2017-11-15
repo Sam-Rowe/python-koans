@@ -36,7 +36,7 @@ class AboutMonkeyPatching(Koan):
         try:
             int.is_even = lambda self: (self % 2) == 0
         except StandardError as ex:
-            self.assertMatch(StandardError, ex[0])
+            self.assertMatch('StandardError', ex[0])
 
     # ------------------------------------------------------------------
 
