@@ -92,7 +92,7 @@ class AboutWithStatements(Koan):
 
     def find_line2(self, file_name):
         # Rewrite find_line using the Context Manager.
-        with self.FileContexManager(file_name) as f:
+        with self.FileContextManager(file_name) as f:
             for line in f.readlines():
                 match = re.search('e', line)
                 if match:
